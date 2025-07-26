@@ -45,10 +45,23 @@ function App() {
                       <div className="card-text">
                         {vip.birth_year} - {vip.death_year}
                       </div>
-                      <div className="card-text">{vip.nationality}</div>
-                      <div className="card-text">{vip.biography}</div>
-                      <div className="card-text">{vip.known_for}</div>
-                      <div className="card-text">{vip.awards}</div>
+                      <div className="card-text">
+                        <span className="fw-bold">Nationality</span>:{" "}
+                        {/* prettier mi mette {" "} in automatico quando salvo */}
+                        {vip.nationality}
+                      </div>
+                      <div className="card-text">
+                        <span className="fw-bold">Biography</span>:{" "}
+                        {vip.biography}
+                      </div>
+                      <div className="card-text">
+                        <span className="fw-bold">Known for</span>:{" "}
+                        {vip.known_for.join(", ")}
+                      </div>
+                      <div className="card-text">
+                        <span className="fw-bold">Awards</span>:{" "}
+                        {vip.awards.join(", ")}
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -58,11 +71,11 @@ function App() {
 
           <h2 className="text-white my-3">Actresses:</h2>
           <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 row-cols-xxl-5 g-3">
-            {/* Actors */}
+            {/* Actresses */}
             {actressesData.map((vip) => {
               return (
                 <div key={vip.id} className="col">
-                  <div className="card d-flex align-items-center h-100">
+                  <div className="card d-flex align-items-center shadow h-100">
                     <img
                       className="card-img-top max-width"
                       src={vip.image}
@@ -73,10 +86,22 @@ function App() {
                       <div className="card-text">
                         {vip.birth_year} - {vip.death_year}
                       </div>
-                      <div className="card-text">{vip.nationality}</div>
-                      <div className="card-text">{vip.biography}</div>
-                      <div className="card-text">{vip.known_for}</div>
-                      <div className="card-text">{vip.awards}</div>
+                      <div className="card-text">
+                        <span className="fw-bold">Nationality</span>:{" "}
+                        {/* prettier mi mette {" "} in automatico quando salvo */}
+                        {vip.nationality}
+                      </div>
+                      <div className="card-text">
+                        <span className="fw-bold">Biography</span>:{" "}
+                        {vip.biography}
+                      </div>
+                      <div className="card-text">
+                        <span className="fw-bold">Known for</span>:{" "}
+                        {vip.most_famous_movies.join(", ")}
+                      </div>
+                      <div className="card-text">
+                        <span className="fw-bold">Awards</span>: {vip.awards}
+                      </div>
                     </div>
                   </div>
                 </div>
